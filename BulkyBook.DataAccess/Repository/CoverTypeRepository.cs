@@ -13,7 +13,7 @@ namespace BulkyBook.DataAccess.Repository
         }
         public void Update(CoverType obj)
         {
-            _db.Update(obj);
+            _db.CoverTypes.Update(obj);
         }
     }
 }
