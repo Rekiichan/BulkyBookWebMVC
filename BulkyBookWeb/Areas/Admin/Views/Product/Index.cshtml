@@ -1,9 +1,9 @@
-﻿@model IEnumerable<BulkyBook.Models.Product>
+﻿@*@model IEnumerable<BulkyBook.Models.Product>
 @{
     ViewData["Title"] = "Index";
 }
 
-<partial name="_Notification" />
+<partial name="_Notification" />*@
 <div class="container p-3">
     <div class="row pt-4">
         <div class="col-6">
@@ -17,7 +17,7 @@
     </div>
     <br /><br />
 
-    <table class="table table-bordered table-striped" style="width:100%">
+    <table id="tblData" class="table table-bordered table-striped" style="width:100%">
         <thead>
             <tr>
                 <th>
@@ -35,8 +35,11 @@
                 <th>
                     <a class="nav-link text-black">Category</a>
                 </th>
-                <th></th>
             </tr>
         </thead>
     </table>
 </div>
+
+@section Scripts{
+    <script src="~/js/product.js"></script>
+}
