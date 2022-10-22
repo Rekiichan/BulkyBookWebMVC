@@ -17,7 +17,7 @@ namespace BulkyBook.DataAccess.Repository
         public Repository(ApplicationDbContext db)
         {
             _db = db;
-            //_db.Products.Include(u => u.Category).Include(u=>u.CoverType);
+            //_db.ShoppingCarts.Include(u => u.Product).Include(u => u.CoverType);
             this.DbSet = _db.Set<T>();
         }
         internal DbSet<T> DbSet;
@@ -26,9 +26,13 @@ namespace BulkyBook.DataAccess.Repository
             DbSet.Add(entity);
         }
 
-        public IEnumerable<T> GetAll(string? includeProperties = null)
+        public IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter=null, string? includeProperties = null)
         {
             IQueryable<T> query = DbSet;
+            if (filter != null)
+            {
+                query = query.Where(filter);
+            }
             if (includeProperties != null)
             {
                 foreach (var includeProp in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))

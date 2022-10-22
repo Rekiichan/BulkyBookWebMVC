@@ -23,11 +23,7 @@ function loadDataTable() {
                          <div class="w-75 btn-group" role="group">
                              <a href="/Admin/Product/Upsert?id=${data}"
                                 class="nav-link text-black" class="btn btn-primary" mx-2><i class="bi bi-pencil-square"></i>  Edit</a>
-                            <a></a>
-                            <a></a>
-                            <a></a>
-                            <a></a>
-                            <a onClick=Delete('/Admin/Product/Delete/${data}')
+                             <a onClick=Delete('/Admin/Product/Delete/${data}')
                                 class="nav-link text-black" class="btn btn-primary" mx-2><i class="bi bi-pencil-square"></i>  Delete</a>
                          </div>
                             `
