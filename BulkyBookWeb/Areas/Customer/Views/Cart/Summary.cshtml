@@ -12,7 +12,7 @@
 						<i class="fa fa-shopping-cart"></i> &nbsp;
 						Order Summary
 					</div>
-					<div class="col-6 text-end">
+					<div class="col-6 text-end" style="color:white">
 						<a asp-action="Index" class="btn btn-outline-info btn-sm">Back to Cart</a>
 					</div>
 				</div>
@@ -23,7 +23,7 @@
 						<div class="col-12 col-lg-6 pb-4">
 							<div class="row">
 								<h4 class="d-flex justify-content-between align-items-center mb-3">
-									<span class="text-info">Shipping Details:</span>
+									<span class="text-info fw-bold">Shipping Details:</span>
 								</h4>
 							</div>
 							<div class="row my-1">
@@ -83,20 +83,20 @@
 						</div>
 						<div class="col-12 col-lg-5 offset-lg-1">
 							<h4 class="d-flex justify-content-between align-items-center mb-3">
-								<span class="text-info">Order Summary:</span>
+								<span class="text-info  fw-bold">Order Summary:</span>
 							</h4>
 							<ul class="list-group mb-3">
 								@foreach(var details in Model.ListCart)
 								{
 								<li class="list-group-item d-flex justify-content-between">
 									<div>
-										<h6 class="my-0">@details.Product.Title</h6>
-										<small class="text-muted">Quantity: @details.Count</small>
+											<h6 class="my-0 fw-bold">@details.Product.Title</h6>
+											<small class="text-muted fw-bold h6">Quantity: @details.Count</small>
 									</div>
-									<span class="text-muted">@((details.Price * details.Count).ToString("c")) </span>
+									<span class="text-muted fw-bold h5">@((details.Price * details.Count).ToString("c")) </span>
 								</li>
 								}
-								<li class="list-group-item d-flex justify-content-between bg-light">
+								<li class="list-group-item d-flex justify-content-between bg-light h4">
 									<small class="text-info">Total (USD)</small>
 									<strong class="text-info">@Model.OrderHeader.OrderTotal.ToString("c")</strong>
 								</li>

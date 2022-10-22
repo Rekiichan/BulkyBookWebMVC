@@ -4,7 +4,7 @@
         <div class="p-2">
             <h2 class="text-primary"> Order List</h2>
 
-            <div class="p-2">
+            @*<div class="p-2">
                 <ul class="list-group list-group-horizontal-sm">
                     <a style="text-decoration:none;" asp-controller="Order" asp-action="Index" asp-route-status="inprocess">
                     <li class="list-group-item">In Process</li>
@@ -19,33 +19,34 @@
                     <li class="list-group-item">All</li>
                     </a>
                 </ul>
-            </div>
+            </div>*@
         </div>
     </div>
     <br /><br />
-
-    <table id="tblData" class="table table-bordered table-striped" style="width:100%">
+    <table id="tblData" class="table table-hover table-striped border-dark bg-white" style="width:100%">
         <thead>
-            <tr>
+            <tr class="table-dark">
                 <th>
-                    <a class="nav-link text-black">ID</a>
+                    <a class="nav-link text-white">ID</a>
                 </th>
                 <th>
-                    <a class="nav-link text-black">Name</a>
+                    <a class="nav-link text-white">Name</a>
                 </th>
                 <th>
-                    <a class="nav-link text-black">Phone Number</a>
+                    <a class="nav-link text-white">Phone Number</a>
                 </th>
                 <th>
-                    <a class="nav-link text-black">Email</a>
+                    <a class="nav-link text-white">Email</a>
                 </th>
                 <th>
-                    <a class="nav-link text-black">Status</a>
+                    <a class="nav-link text-white">Status</a>
                 </th>
                 <th>
-                    <a class="nav-link text-black">Total</a>
+                    <a class="nav-link text-white">Total</a>
                 </th>
-                <th></th>
+                <th>
+                    <a class="nav-link text-white">Detail</a>
+                </th>
             </tr>
         </thead>
     </table>

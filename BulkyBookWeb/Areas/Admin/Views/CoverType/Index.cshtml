@@ -17,11 +17,17 @@
     </div>
 </div>
 
-<table class="table table-bordered table-striped" style="width:100%">
+<table class="table table-hover table-striped border-dark bg-white" style="width:100%">
     <thead>
-        <tr>
+        <tr class="table-dark">
             <th>
-                <a class="nav-link text-black">CoverType Name</a>
+                <a class="nav-link text-white">CoverType Name</a>
+            </th>
+            <th>
+                EDIT
+            </th>
+            <th>
+                DELETE
             </th>
         </tr>
     </thead>
@@ -33,16 +39,16 @@
                     <a class="nav-link text-black">@obj.Name</a>
                 </td>
                 <td width="10%">
-                    <dib class="w-75 btn-group" role="group">
+                    <div class="w-75 btn-group" role="group">
                         <a class="nav-link text-black" asp-controller="CoverType" asp-action="Edit" asp-route-id="@obj.Id"
                         class="btn btn-primary" mx-2><i class="bi bi-pencil-square"></i>  Edit</a>
-                    </dib>
+                    </div>
                 </td>
-                <td>
-                    <dib class="w-75 btn-group" role="group">
+                <td width="10%">
+                    <div class="w-75 btn-group" role="group">
                         <a class="nav-link text-black" asp-controller="CoverType" asp-action="Delete" asp-route-id="@obj.Id"
                        class="btn btn-danger" mx-2><i class="bi bi-trash"></i>  Delete</a>
-                    </dib>
+                    </div>
                 </td>
             </tr>
         }
