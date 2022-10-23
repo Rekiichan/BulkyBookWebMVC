@@ -10,7 +10,8 @@ using System.Data;
 namespace BulkyBookWeb.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize(Roles = SD.Role_Admin)]
+    //[Authorize(Roles = SD.Role_Admin)]
+    [Authorize]
     public class CompanyController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
