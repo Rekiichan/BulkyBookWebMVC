@@ -3,10 +3,14 @@ using BulkyBook.DataAccess.Repository.IRepository;
 using BulkyBook.Models;
 using Microsoft.AspNetCore.Mvc;
 using BulkyBook.Models.ViewModels;
+using BulkyBook.Utility;
+using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 namespace BulkyBookWeb.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin)]
     public class ProductController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -55,7 +59,7 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
         //POST
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Upsert(ProductVM obj, IFormFile file)
+        public IActionResult Upsert(ProductVM obj, IFormFile? file)
         {
             if (ModelState.IsValid)
             {

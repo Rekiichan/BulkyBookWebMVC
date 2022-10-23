@@ -3,10 +3,14 @@ using BulkyBook.DataAccess.Repository.IRepository;
 using BulkyBook.Models;
 using Microsoft.AspNetCore.Mvc;
 using BulkyBook.Models.ViewModels;
+using BulkyBook.Utility;
+using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 namespace BulkyBookWeb.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin)]
     public class CompanyController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -61,7 +65,10 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
         public IActionResult GetAll()
         {
             var companyList = _unitOfWork.Company.GetAll();
-            return Json(new { data = companyList });
+            return Json(new 
+            { 
+                data = companyList 
+            });
         }
         #endregion
 
