@@ -13,3 +13,5 @@ D:\visualWorkspace\BulkyBook.DataAccess\obj\Debug\net6.0\BulkyBook.DataAccess.dl
 D:\visualWorkspace\BulkyBook.DataAccess\obj\Debug\net6.0\refint\BulkyBook.DataAccess.dll
 D:\visualWorkspace\BulkyBook.DataAccess\obj\Debug\net6.0\BulkyBook.DataAccess.pdb
 D:\visualWorkspace\BulkyBook.DataAccess\obj\Debug\net6.0\ref\BulkyBook.DataAccess.dll
+D:\visualWorkspace\BulkyBook.DataAccess\bin\Debug\net6.0\BulkyBook.Utility.dll
+D:\visualWorkspace\BulkyBook.DataAccess\bin\Debug\net6.0\BulkyBook.Utility.pdb
