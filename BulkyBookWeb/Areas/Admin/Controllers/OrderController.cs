@@ -70,8 +70,8 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
             }
             else
             {
-                var claimsIdentity = (ClaimsIdentity)User.Identity;
-                var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
+                var claimsIdentity = User.Identity as ClaimsIdentity;
+                Claim? claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
                 orderHeaders = _unitOfWork.OrderHeader.GetAll(u => u.ApplicationUserId==claim.Value
                     ,includeProperties: "ApplicationUser");
             }
