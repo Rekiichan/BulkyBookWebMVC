@@ -19,7 +19,7 @@ namespace BulkyBook.DataAccess.Repository
             _db = db;
             //_db.ShoppingCarts.AsNoTracking()
             //_db.ShoppingCarts.Include(u => u.Product).Include(u => u.CoverType);
-            this.DbSet = _db.Set<T>();
+            DbSet = _db.Set<T>();
 
         }
         internal DbSet<T> DbSet;
